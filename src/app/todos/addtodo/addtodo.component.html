@@ -1,0 +1,37 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8 col-md-offset-2">
+      <h1>Add ToDo</h1>
+      <form (ngSubmit)="OnSubmit(form)" #form="ngForm">
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" name="title" id="title" ngModel class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" name="desc" id="desc" ngModel class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" name="date" id="date" ngModel class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label>From Time</label>
+          <input type="time" name="ftime" id="ftime" ngModel class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label>To Time</label>
+          <input type="time" name="ttime" id="ttime" ngModel class="form-control" required>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary"  [disabled]="form.invalid"> Add</button>
+      </form>
+    </div>
+  </div>
+</div>
